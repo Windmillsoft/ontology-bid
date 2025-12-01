@@ -1,0 +1,265 @@
+/* Salesforce Lightning Design System (SLDS) Styles */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/design-system/2.22.3/styles/salesforce-lightning-design-system.min.css');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* SLDS Color Tokens */
+  --slds-c-color-brand-base: #0176d3;
+  --slds-c-color-brand-10: #eff8ff;
+  --slds-c-color-brand-dark: #014486;
+  
+  --slds-c-color-success-base: #2e844a;
+  --slds-c-color-success-10: #ecf3ed;
+  --slds-c-color-success-dark: #194e31;
+  
+  --slds-c-color-warning-base: #dd7a01;
+  --slds-c-color-warning-10: #fef6ec;
+  --slds-c-color-warning-dark: #954d00;
+  
+  --slds-c-color-error-base: #ea001e;
+  --slds-c-color-error-10: #fef0f0;
+  --slds-c-color-error-dark: #ba0517;
+  
+  --slds-c-color-neutral-base-10: #fafaf9;
+  --slds-c-color-neutral-base-30: #f3f2f2;
+  --slds-c-color-neutral-base-50: #ecebea;
+  --slds-c-color-neutral-base-70: #c9c7c5;
+  --slds-c-color-neutral-base-80: #706e6b;
+  --slds-c-color-neutral-base-90: #514f4d;
+  --slds-c-color-neutral-base-95: #3e3e3c;
+  --slds-c-color-neutral-base-100: #181818;
+  
+  /* Text Colors */
+  --slds-g-color-text-default: #181818;
+  --slds-g-color-text-weak: #706e6b;
+  --slds-g-color-text-inverse: #ffffff;
+  
+  /* Background Colors */
+  --slds-g-color-background: #ffffff;
+  --slds-g-color-background-alt: #f3f2f2;
+  --slds-g-color-background-inverse: #16325c;
+  
+  /* Border Colors */
+  --slds-g-color-border: #c9c7c5;
+  --slds-g-color-border-strong: #706e6b;
+  
+  /* Original tokens for compatibility */
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #0176d3;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: #f3f2f2;
+  --secondary-foreground: #181818;
+  --muted: #ecebea;
+  --muted-foreground: #706e6b;
+  --accent: #e9ebef;
+  --accent-foreground: #181818;
+  --destructive: #ea001e;
+  --destructive-foreground: #ffffff;
+  --border: #c9c7c5;
+  --input: transparent;
+  --input-background: #f3f2f2;
+  --switch-background: #c9c7c5;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #0176d3;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.25rem;
+}
+
+.dark {
+  --slds-g-color-background: #181818;
+  --slds-g-color-background-alt: #3e3e3c;
+  --slds-g-color-text-default: #ffffff;
+  --slds-g-color-text-weak: #c9c7c5;
+  --slds-g-color-border: #514f4d;
+  
+  --background: #181818;
+  --foreground: #ffffff;
+  --card: #181818;
+  --card-foreground: #ffffff;
+  --popover: #181818;
+  --popover-foreground: #ffffff;
+  --primary: #0176d3;
+  --primary-foreground: #ffffff;
+  --secondary: #3e3e3c;
+  --secondary-foreground: #ffffff;
+  --muted: #3e3e3c;
+  --muted-foreground: #c9c7c5;
+  --accent: #3e3e3c;
+  --accent-foreground: #ffffff;
+  --destructive: #ea001e;
+  --destructive-foreground: #ffffff;
+  --border: #514f4d;
+  --input: #3e3e3c;
+  --ring: #0176d3;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+  }
+}
+
+/**
+ * SLDS Typography Overrides
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 300;
+      line-height: 1.25;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 300;
+      line-height: 1.25;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    h4 {
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    p {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: 0.75rem;
+      font-weight: 400;
+      line-height: 1.25;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    button {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    input, select, textarea {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+}
+
+/* SLDS Custom Utilities */
+.slds-page-header {
+  background: var(--slds-g-color-background);
+  border-bottom: 1px solid var(--slds-g-color-border);
+  padding: 1rem 1.5rem;
+}
+
+.slds-card-custom {
+  background: var(--slds-g-color-background);
+  border: 1px solid var(--slds-g-color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.slds-text-heading_small {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+
+.slds-text-body_regular {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.slds-text-color_weak {
+  color: var(--slds-g-color-text-weak);
+}
+
+.slds-m-bottom_x-small {
+  margin-bottom: 0.5rem;
+}
+
+.slds-m-bottom_small {
+  margin-bottom: 0.75rem;
+}
+
+.slds-m-bottom_medium {
+  margin-bottom: 1rem;
+}
+
+.slds-p-around_medium {
+  padding: 1rem;
+}
+
+.slds-p-around_small {
+  padding: 0.75rem;
+}
+
+.slds-scrollable_y {
+  overflow-y: auto;
+}
+
+html {
+  font-size: var(--font-size);
+}

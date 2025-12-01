@@ -1,0 +1,15 @@
+.sfdx/
+.sf/
+.localdevserver/
+.vscode/
+node_modules/
+dist/
+coverage/
+logs/
+*.log
+*.tmp
+.DS_Store
+.env
+.env.*
+npm-debug.log*
+yarn-error.log*

@@ -1,0 +1,4 @@
+# Local and build artifacts
+**/.*.swp
+**/.DS_Store
+**/node_modules
